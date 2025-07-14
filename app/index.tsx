@@ -1,3 +1,4 @@
+import CartButton from "@/components/CartButton";
 import { images, offers } from "@/constants";
 import cn from "clsx";
 import { Fragment } from "react";
@@ -77,7 +78,7 @@ export default function App() {
               </TouchableOpacity>
             </View>
 
-            <Text>Cart</Text>
+            <CartButton />
           </View>
         )}
       />
