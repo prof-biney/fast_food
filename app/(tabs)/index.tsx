@@ -1,8 +1,10 @@
 import CartButton from "@/components/CartButton";
 import { images, offers } from "@/constants";
 import cn from "clsx";
+import { router } from "expo-router";
 import { Fragment } from "react";
 import {
+  Button,
   FlatList,
   Image,
   Pressable,
@@ -82,7 +84,7 @@ export default function App() {
           </View>
         )}
       />
-
+      <Button title="Go to Sign In" onPress={() => router.push("/sign-in")} />
       <StatusBar />
     </SafeAreaView>
   );
