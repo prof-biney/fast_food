@@ -66,3 +66,13 @@ export const signIn = async ({ email, password }: SignInParams) => {
     throw new Error((error as string) || "An error occurred while signing in.");
   }
 };
+
+export const logout = async () => {
+  try {
+    await account.deleteSession("current");
+  } catch (error: any) {
+    throw new Error(
+      (error as string) || "An error occurred while logging out."
+    );
+  }
+};
